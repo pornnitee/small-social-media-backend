@@ -1,24 +1,37 @@
-# README
+# Small Social Media Back-end
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The API is consumed by [Front-end](https://github.com/pornnitee/small-social-media-frontend) 
 
-Things you may want to cover:
+# Setup
+ * Install the required Gems
+```shell
+bundle install
+```
+# Create the database
+```shell
+rails db:setup
+```
 
-* Ruby version
+# Start server
+```shell
+rails server
+```
 
-* System dependencies
 
-* Configuration
+## Running Tests
 
-* Database creation
+### RSpec
 
-* Database initialization
+A test framework for Ruby.
 
-* How to run the test suite
+Run test scripts
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```bash
+  rspec
+  ```
 
-* Deployment instructions
+  To run a specific test script, use the following command:
 
-* ...
+  ```bash
+  rspec spec/models/model_name_spec.rb
+  ```
