@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def current_user
+        @current_user
+    end
+
     private def api_error(status, message)
         render status: status, json: { error: status, error_description: message }
       end

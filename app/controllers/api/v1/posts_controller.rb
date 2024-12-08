@@ -18,7 +18,7 @@ class Api::V1::PostsController < ApplicationController
     end
 
     def create
-      @post = @current_user.posts.create(post_params)
+      @post = current_user.posts.create(post_params)
 
       if @post.save
         render_json_api @post
@@ -46,7 +46,7 @@ class Api::V1::PostsController < ApplicationController
     end
 
     def set_post
-      @post = @current_user.posts.find_by(id: params[:id])
+      @post = current_user.posts.find_by(id: params[:id])
     end
 
     def post_params
