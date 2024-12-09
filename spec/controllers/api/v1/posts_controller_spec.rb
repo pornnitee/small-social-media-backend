@@ -22,11 +22,11 @@ RSpec.describe Api::V1::PostsController, type: :controller do
 
   describe 'GET #show' do
     context 'when the post exists' do
-      it 'returns the requested post' do
+        it 'returns the requested post' do
         get :show, params: { id: post.id }
         expect(response).to have_http_status(:ok)
         expect(JSON.parse(response.body)['data']['id']).to eq(post.id.to_s)
-      end
+        end
     end
 
     context 'when the post does not exist' do

@@ -12,11 +12,11 @@ class Api::V1::RegistrationsController < ApplicationController
         invalid_resource_error user
       end
     end
-  
+
     private
 
     def user_params
       params.require(:user).permit(:email, :user_name, :password, :password_confirmation)
     end
-  end
+end
   
